@@ -13,15 +13,17 @@
   <link rel="stylesheet" type="text/css" href="assets/js/select.dataTables.min.css">
   <link rel="stylesheet" href="assets/css/vertical-layout-light/style.css">
 
+
   <link rel="shortcut icon" href="assets/images/favicon.png" />
 </head>
 <body>
+
   <div class="container-scroller">
      <!--     Navbar     -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="assets/images/logo.svg" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="assets/images/logo.svg" class="mr-3" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo.svg" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -46,52 +48,45 @@
         </button>
       </div>
     </nav>
-
     <div class="container-fluid page-body-wrapper">
 
       <!--     Sidebar   -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" id="btnDashboard">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <li class="nav-item" id="btnEmployee">
-            <a class="nav-link" data-toggle="collapse"href="#ui-basic" aria-expanded="false" aria-controls="#ui-basic" >
-              <i class="icon-layout menu-icon"></i>
+          <li class="nav-item">
+            <a class="nav-link" id="btnEmployee" >
+              <i class="icon-file menu-icon"></i>
               <span class="menu-title">Employee</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+            <a class="nav-link" id="btnCustomer">
               <i class="icon-columns menu-icon"></i>
               <span class="menu-title">Customer</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+            <a class="nav-link" id="btnSupplier">
               <i class="icon-bar-graph menu-icon"></i>
               <span class="menu-title">Supplier</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+            <a class="nav-link" id="btnInventory">
               <i class="icon-grid-2 menu-icon"></i>
               <span class="menu-title">Inventory</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-              <i class="icon-contract menu-icon"></i>
+            <a class="nav-link" id="btnSale">
+              <i class="icon-layout menu-icon"></i>
               <span class="menu-title">Sale</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <i class="icon-head menu-icon"></i>
-              <span class="menu-title">User Pages</span>
             </a>
           </li>
           <li class="nav-item">
@@ -110,7 +105,7 @@
       </div>
 
       <!--    dashboard  -->
-      <div class="main-panel">
+      <div class="main-panel" id="dashboardFrom">
         <div class="content-wrapper">
           <div class="row">
             <div class="col-md-12 grid-margin">
@@ -125,17 +120,6 @@
               <div class="card tale-bg">
                 <div class="card-people mt-auto">
                   <img src="assets/images/dashboard/people.svg" alt="people">
-                  <div class="weather-info">
-                    <div class="d-flex">
-                      <div>
-                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
-                      </div>
-                      <div class="ml-2">
-                        <h4 class="location font-weight-normal">Bangalore</h4>
-                        <h6 class="font-weight-normal">India</h6>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -363,6 +347,10 @@
           </div>
         </div>
       </div>
+
+
+
+
     </div>
   </div>
 
@@ -380,14 +368,21 @@
   <script src="assets/js/Chart.roundedBarCharts.js"></script>
 
   <script src="assets/lib/jquery.min.js"></script>
+  <script type="module" src="controller/Navigation.js"></script>
 
 <script>
-  $("#employeeForm").css('display','none');
-</script>
-<script>
-  $("#btnEmployee").on('click',()=>{
-    $("#employeeForm").css('display','block');
+
+  $(document).ready(function () {
+    $("#dashboardFrom").css('display','block');
   })
+
+  $("#dashboardFrom").css('display','none');
+  $("#employeeForm").css('display','none');
+  $("#customerForm").css('display','none');
+  $("#supplierForm").css('display','none');
+  $("#inventoryForm").css('display','none');
+  $("#saleForm").css('display','none');
+
 </script>
 </body>
 

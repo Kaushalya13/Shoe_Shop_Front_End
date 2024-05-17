@@ -55,7 +55,7 @@ body {
   line-height: 1.5;
   color: #1F1F1F;
   text-align: left;
-  background-color:lightskyblue;
+  background-color:white;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -1592,6 +1592,15 @@ select.tt-hint:focus::-ms-value {
   width: 100%;
 }
 
+#pic{
+  position: absolute;
+  right: -9.3rem;
+}
+
+#pic01{
+  position: absolute;
+  right: -9.3rem;
+}
 .col-form-label {
   padding-top: calc(0.875rem + 1px);
   padding-bottom: calc(0.875rem + 1px);
@@ -2686,6 +2695,196 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
+
+button{
+  font-weight: bold;
+}
+
+#btnSave{
+  background:red;
+  position: relative;
+  right: -730px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+#btnUpdate{
+  background: green;
+  position: relative;
+  right: -740px;
+  width: 90px;
+  height: 30px;
+  border: black 1px;
+  border-radius: 10px;
+}
+
+#reset{
+  background: #f1c40f;
+  position: relative;
+  right: -750px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+
+#btnCusSave{
+  background: red;
+  position: relative;
+  right: -730px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+#btnCusUpdate{
+  background: green;
+  position: relative;
+  right: -740px;
+  width: 90px;
+  height: 30px;
+  border: black 1px;
+  border-radius: 10px;
+}
+
+#btnCusReset{
+  background: #f1c40f;
+  position: relative;
+  right: -750px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+#btnSupSave{
+  background: red;
+  position: relative;
+  right: -730px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+#btnSupUpdate{
+  background: green;
+  position: relative;
+  right: -740px;
+  width: 90px;
+  height: 30px;
+  border: black 1px;
+  border-radius: 10px;
+}
+
+#btnSupReset{
+  background: #f1c40f;
+  position: relative;
+  right: -750px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+
+
+#btnItemSave{
+  background: red;
+  position: relative;
+  right: -730px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+#btnItemUpdate{
+  background: green;
+  position: relative;
+  right: -740px;
+  width: 90px;
+  height: 30px;
+  border: black 1px;
+  border-radius: 10px;
+}
+
+#btnItemReset{
+  background: #f1c40f;
+  position: relative;
+  right: -750px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+
+
+#btnSizeSave{
+  background: red;
+  position: relative;
+  right: -730px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+#btnSizeUpdate{
+  background: green;
+  position: relative;
+  right: -740px;
+  width: 90px;
+  height: 30px;
+  border: black 1px;
+  border-radius: 10px;
+}
+
+#btnSizeReset{
+  background: #f1c40f;
+  position: relative;
+  right: -750px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+#btnSaleSave{
+  background: red;
+  position: relative;
+  right: -730px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
+#btnSaleUpdate{
+  background: green;
+  position: relative;
+  right: -740px;
+  width: 90px;
+  height: 30px;
+  border: black 1px;
+  border-radius: 10px;
+}
+
+#btnSaleReset{
+  background: #f1c40f;
+  position: relative;
+  right: -750px;
+  width: 90px;
+  height: 30px;
+  border: black;
+  border-radius: 10px;
+}
+
 
 .fade {
   transition: opacity 0.15s linear;
@@ -3975,6 +4174,7 @@ input[type="button"].btn-block {
   }
 }
 
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -4122,6 +4322,31 @@ input[type="button"].btn-block {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+}
+
+.navbar .navbar-menu-wrapper .navbar-toggler:not(.navbar-toggler-right) {
+  transform: rotate(0deg);
+  -webkit-transition: transform 0.3s linear;
+  -moz-transition: transform 0.3s linear;
+  -ms-transition: transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
+  transition: transform 0.3s linear;
+}
+
+.navbar .navbar-menu-wrapper .navbar-toggler {
+  border: 0;
+  color: inherit;
+  font-size: 1.25rem;
+  padding: 0;
+  border-radius: 0;
+}
+
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+.align-self-center {
+  align-self: center !important;
 }
 
 .navbar-toggler {
@@ -4451,7 +4676,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background:white;
   background-clip: border-box;
   border: 1px solid #e3e3e3;
   border-radius: 20px;
@@ -9730,7 +9955,7 @@ a.text-dark:hover, a.text-dark:focus {
   .table, .jsgrid .jsgrid-table {
     border-collapse: collapse !important;
   }
-  
+
   .table td,
   .jsgrid .jsgrid-table td, .table th, .jsgrid .jsgrid-table th {
     background-color: #ffffff !important;
@@ -10453,7 +10678,7 @@ code {
 
 .card-people {
   position: relative;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .card-people img {
@@ -10476,20 +10701,20 @@ code {
   margin-bottom: 0;
 }
 
-.weather-info {
-  position: absolute;
-  top: 30px;
-  right: 24px;
-}
+/*.weather-info {*/
+/*  position: absolute;*/
+/*  top: 30px;*/
+/*  right: 24px;*/
+/*}*/
 
-.weather-info sup {
-  font-size: 18px;
-}
+/*.weather-info sup {*/
+/*  font-size: 18px;*/
+/*}*/
 
-.weather-info .location {
-  font-size: 20px;
-  margin-bottom: 0;
-}
+/*.weather-info .location {*/
+/*  font-size: 20px;*/
+/*  margin-bottom: 0;*/
+/*}*/
 
 .fs-30 {
   font-size: 30px;
@@ -10955,10 +11180,10 @@ code {
 }
 
 .card .card-title {
-  color: #010101;
+  color:black;
   margin-bottom: 1.2rem;
   text-transform: capitalize;
-  font-size: 1.125rem;
+  font-size: 2.225rem;
   font-weight: 600;
 }
 
@@ -10970,8 +11195,8 @@ code {
 
 .card .card-description {
   margin-bottom: .875rem;
-  font-weight: 400;
-  color: #76838f;
+  font-weight: 900;
+  color: black;
 }
 
 .card.card-outline-success {
@@ -13494,7 +13719,7 @@ body.avgrund-active {
 }
 
 .content-wrapper {
-  background: #F5F7FF;
+  background:#D6EBEE;
   padding: 2.375rem 2.375rem;
   width: 100%;
   -webkit-flex-grow: 1;
@@ -13509,8 +13734,10 @@ body.avgrund-active {
 
 /* Sidebar */
 .sidebar {
+  position: relative;
+  display: flex;
   min-height: calc(100vh - 60px);
-  background: #fff;
+  background:#CAF0F8;
   font-family: "Nunito", sans-serif;
   font-weight: 500;
   padding: 0;
