@@ -18,40 +18,42 @@
 </head>
 <body>
 
-  <div class="container-scroller">
-     <!--     Navbar     -->
-    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="assets/images/logo.svg" class="mr-3" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo.svg" alt="logo"/></a>
-      </div>
-      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-          <span class="icon-menu"></span>
-        </button>
-        <ul class="navbar-nav mr-lg-2">
-          <li class="nav-item nav-search d-none d-lg-block">
-            <div class="input-group">
-              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
-                <span class="input-group-text" id="search">
-                  <i class="icon-search"></i>
-                </span>
-              </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav navbar-nav-right">
-          <li class="nav-item dropdown">
-        </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-        </button>
-      </div>
-    </nav>
+
+  <div  class="container-scroller">
     <div class="container-fluid page-body-wrapper">
 
+      <!--    Navbar  -->
+      <nav  class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="assets/images/logo.svg" class="mr-3" alt="logo"/></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo.svg" alt="logo"/></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button>
+          <ul class="navbar-nav mr-lg-2">
+            <li class="nav-item nav-search d-none d-lg-block">
+              <div class="input-group">
+                <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                  <span class="input-group-text" id="search">
+                    <i class="icon-search"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item dropdown"></li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          </button>
+        </div>
+       </nav>
+
       <!--     Sidebar   -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar" >
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" id="btnDashboard">
@@ -90,7 +92,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+            <a class="nav-link" id="btnSignOut">
               <i class="icon-ban menu-icon"></i>
               <span class="menu-title">Sign Out</span>
             </a>
@@ -101,6 +103,22 @@
         <div class="tab-content" id="setting-content">
           <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
           </div>
+        </div>
+      </div>
+
+      <!--  signIn   -->
+      <div class="main" id="signInForm">
+        <div class="signIn" >
+          <form class="sign-in-form">
+            <h2>Sign In</h2>
+            <div class="mainForm">
+              <input type="email" id="email" placeholder="Email" name="email" required>
+            </div>
+            <div class="mainForm">
+              <input type="password" id="password" placeholder="Password" name="password" required>
+            </div>
+            <button id="btnSignIn" type="button">Sign In</button>
+          </form>
         </div>
       </div>
 
@@ -368,6 +386,7 @@
                       </div>
                       <div class="col-md-5">
                         <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Img</label>
                           <div class="col-sm-9 me-7">
                             <input id="pic" type="file" class="form-control" onchange="imageUploaded()">
                           </div>
@@ -986,7 +1005,7 @@
             <div class="col-12 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Inventory Details Form</h4>
+                  <h4 class="card-title">Inventory Manage Form</h4>
                   <form class="form-sample">
                     <div class="row">
                       <div class="col-md-6">
@@ -999,6 +1018,7 @@
                       </div>
                       <div class="col-md-5">
                         <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Img</label>
                           <div class="col-sm-9 me-7">
                             <input id="pic01" type="file" class="form-control" onchange="imageUploaded()">
                           </div>
@@ -1028,63 +1048,25 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_03</label>
+                          <label class="col-sm-3 col-form-label">Gender</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <select class="form-control">
+                              <option>Man</option>
+                              <option>Women</option>
+                            </select>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_04</label>
+                          <label class="col-sm-3 col-form-label">Occasion Type</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_05</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_06</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">ContactNo 01</label>
-                          <div class="col-sm-9">
-                            <input type="tel" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">ContactNo 02</label>
-                          <div class="col-sm-9">
-                            <input type="tel" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Email</label>
-                          <div class="col-sm-9">
-                            <input type="email" class="form-control" />
+                            <select class="form-control">
+                              <option>Formal</option>
+                              <option>Casual</option>
+                              <option>Industrial</option>
+                              <option>Sport</option>
+                            </select>
                           </div>
                         </div>
                       </div>
@@ -1107,22 +1089,19 @@
                             <thead>
                             <tr>
                               <th>
-                                Name
+                                Id/Name
+                              </th>
+                              <th>
+                                Picture
                               </th>
                               <th>
                                 Category
                               </th>
                               <th>
-                                Address
+                                Gender
                               </th>
                               <th>
-                                Contact
-                              </th>
-                              <th>
-                                Email
-                              </th>
-                              <th>
-                                Date of Birth
+                                Occasion
                               </th>
                               <th>
                                 Button
@@ -1136,20 +1115,24 @@
                     </div>
                   </div>
                   <br><br><br><br>
+
+
                   <h4 class="card-title">Size Details Form</h4>
                   <form class="form-sample">
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Item_Name</label>
+                          <label class="col-sm-3 col-form-label">Item Name</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <select class="form-control">
+                              <option>Select Items</option>
+                            </select>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Item_Name</label>
+                          <label class="col-sm-3 col-form-label">Size</label>
                           <div class="col-sm-9 me-7">
                             <input type="text" class="form-control" />
                           </div>
@@ -1159,7 +1142,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Category</label>
+                          <label class="col-sm-3 col-form-label">Item Qty</label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" />
                           </div>
@@ -1167,10 +1150,10 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Suppler_Name</label>
+                          <label class="col-sm-3 col-form-label">Select Status</label>
                           <div class="col-sm-9">
                             <select class="form-control">
-                              <option>Select Supplier</option>
+                              <option>Select Status</option>
                             </select>
                           </div>
                         </div>
@@ -1179,33 +1162,15 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_03</label>
+                          <label class="col-sm-3 col-form-label">Profit Margin</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input type="number" class="form-control" />
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_04</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_05</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_06</label>
+                          <label class="col-sm-3 col-form-label">Unit Price-Sale</label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" />
                           </div>
@@ -1215,27 +1180,17 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">ContactNo 01</label>
+                          <label class="col-sm-3 col-form-label">Unit Price-Buy</label>
                           <div class="col-sm-9">
-                            <input type="tel" class="form-control" />
+                            <input type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">ContactNo 02</label>
+                          <label class="col-sm-3 col-form-label">Expected Profit</label>
                           <div class="col-sm-9">
-                            <input type="tel" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Email</label>
-                          <div class="col-sm-9">
-                            <input type="email" class="form-control" />
+                            <input type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -1248,6 +1203,50 @@
                     </div>
                   </form>
 
+                  <!--              Size table    -->
+                  <div class="col-lg-12 stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Size Details Table</h4>
+                        <div class="table-responsive pt-3">
+                          <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                              <th>
+                                Item Id
+                              </th>
+                              <th>
+                                Size
+                              </th>
+                              <th>
+                                Qty
+                              </th>
+                              <th>
+                                Profit Margin
+                              </th>
+                              <th>
+                                Unit Price-Sale
+                              </th>
+                              <th>
+                                Unit Price-Buy
+                              </th>
+                              <th>
+                                Expected Profit
+                              </th>
+                              <th>
+                                Status
+                              </th>
+                              <th>
+                                Button
+                              </th>
+                            </tr>
+                            </thead>
+                            <tbody id="size-tbl"></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
                 </div>
               </div>
@@ -1444,13 +1443,17 @@
 
   <script src="assets/lib/jquery.min.js"></script>
   <script type="module" src="controller/Navigation.js"></script>
+  <script type="module" src="controller/SignInForm.js"></script>
 
 <script>
 
-  $(document).ready(function () {
-    $("#dashboardFrom").css('display','block');
-  })
 
+  // $(document).ready(function () {
+  //   $("#dashboardFrom").css('display','block');
+  // })
+
+  $("#navigationbar").css('display','none');
+  $("#sidebar").css('display','none');
   $("#dashboardFrom").css('display','none');
   $("#employeeForm").css('display','none');
   $("#customerForm").css('display','none');
