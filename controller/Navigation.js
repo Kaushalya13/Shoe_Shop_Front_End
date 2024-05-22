@@ -5,6 +5,7 @@ $("#btnDashboard").on('click',()=>{
     $("#supplierForm").css('display','none');
     $("#inventoryForm").css('display','none');
     $("#saleForm").css('display','none');
+    $("#signInForm").css('display','none');
 })
 
 $("#btnEmployee").on('click',()=>{
@@ -14,6 +15,7 @@ $("#btnEmployee").on('click',()=>{
     $("#supplierForm").css('display','none');
     $("#inventoryForm").css('display','none');
     $("#saleForm").css('display','none');
+    $("#signInForm").css('display','none');
 })
 
 $("#btnCustomer").on('click',()=>{
@@ -23,6 +25,7 @@ $("#btnCustomer").on('click',()=>{
     $("#customerForm").css('display','block');
     $("#inventoryForm").css('display','none');
     $("#saleForm").css('display','none');
+    $("#signInForm").css('display','none');
 })
 
 $("#btnSupplier").on('click',()=>{
@@ -32,6 +35,7 @@ $("#btnSupplier").on('click',()=>{
     $("#inventoryForm").css('display','none');
     $("#supplierForm").css('display','block');
     $("#saleForm").css('display','none');
+    $("#signInForm").css('display','none');
 })
 
 $("#btnInventory").on('click',()=>{
@@ -41,6 +45,7 @@ $("#btnInventory").on('click',()=>{
     $("#supplierForm").css('display','none');
     $("#saleForm").css('display','none');
     $("#inventoryForm").css('display','block');
+    $("#signInForm").css('display','none');
 })
 
 $("#btnSale").on('click',()=>{
@@ -50,4 +55,16 @@ $("#btnSale").on('click',()=>{
     $("#inventoryForm").css('display','none');
     $("#supplierForm").css('display','none');
     $("#saleForm").css('display','block');
+    $("#signInForm").css('display','none');
 })
+
+$("#btnSignOut").on('click',()=>{
+    $("#dashboardFrom").css('display','none');
+    $("#employeeForm").css('display','none');
+    $("#customerForm").css('display','none');
+    $("#inventoryForm").css('display','none');
+    $("#supplierForm").css('display','none');
+    $("#saleForm").css('display','none');
+    $("#sidebar").css('display','none');
+    $("#signInForm").css('display','block');
+});
