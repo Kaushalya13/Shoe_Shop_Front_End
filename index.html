@@ -380,7 +380,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Emp_Name</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input id="name" name="name" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -398,9 +398,10 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Gender</label>
                           <div class="col-sm-9">
-                            <select class="form-control">
-                              <option>Male</option>
-                              <option>Female</option>
+                            <select name="gender" class="form-control">
+                              <option selected>Select Gender</option>
+                              <option value="MALE">MALE</option>
+                              <option value="FEMALE">FEMALE</option>
                             </select>
                           </div>
                         </div>
@@ -409,9 +410,10 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Status </label>
                           <div class="col-sm-9">
-                            <select class="form-control">
-                              <option>Single</option>
-                              <option>Married</option>
+                            <select name="status" class="form-control">
+                              <option selected>Status</option>
+                              <option value="single">Single</option>
+                              <option value="married">Married</option>
                             </select>
                           </div>
                         </div>
@@ -422,7 +424,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Designation</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="designation" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -430,7 +432,8 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Select Role</label>
                           <div class="col-sm-9">
-                            <select class="form-control">
+                            <select name="role" class="form-control">
+                              <option selected>Select Role</option>
                               <option value="ADMIN">ADMIN</option>
                               <option value="USER">USER</option>
                             </select>
@@ -443,7 +446,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">DOB</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="date" placeholder="dd/mm/yyyy"/>
+                            <input id="dob" name="dob" class="form-control" type="date" placeholder="dd/mm/yyyy"/>
                           </div>
                         </div>
                       </div>
@@ -451,7 +454,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Date of Join</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="date" placeholder="dd/mm/yyyy"/>
+                            <input id="joinDate" class="form-control" type="date" placeholder="dd/mm/yyyy"/>
                           </div>
                         </div>
                       </div>
@@ -469,7 +472,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_01</label>
                           <div class="col-sm-9">
-                            <input  type="text" class="form-control">
+                            <input id="address01" name="address01" type="text" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -479,7 +482,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_02</label>
                           <div class="col-sm-9">
-                            <input  type="text" class="form-control">
+                            <input  name="address02" type="text" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -487,7 +490,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_03</label>
                           <div class="col-sm-9">
-                            <input  type="text" class="form-control">
+                            <input name="address03" type="text" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -497,7 +500,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_04</label>
                           <div class="col-sm-9">
-                            <input  type="text" class="form-control">
+                            <input  name="address04" type="text" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -505,7 +508,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_05</label>
                           <div class="col-sm-9">
-                            <input  type="text" class="form-control">
+                            <input name="address05" type="text" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -515,7 +518,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Contact No</label>
                           <div class="col-sm-9">
-                            <input  type="tel" class="form-control">
+                            <input  id="empContactNo" name="contactNo" type="tel" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -523,7 +526,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Email</label>
                           <div class="col-sm-9">
-                            <input  type="email" class="form-control">
+                            <input  id="empEmail" name="email" type="email" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -533,7 +536,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Inform in case of emergency</label>
                           <div class="col-sm-9">
-                            <input  type="tel" class="form-control">
+                            <input id="informInCaseOfEmergency" type="tel" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -541,7 +544,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Emergency Contact</label>
                           <div class="col-sm-9">
-                            <input  type="tel" class="form-control">
+                            <input name="emergencyContact" type="tel" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -551,7 +554,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Password</label>
                           <div class="col-sm-9">
-                            <input  type="password" class="form-control">
+                            <input name="password" type="password" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -559,7 +562,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Re-Password</label>
                           <div class="col-sm-9">
-                            <input  type="password" class="form-control">
+                            <input id="rePassword" type="password" class="form-control">
                           </div>
                         </div>
                       </div>
