@@ -232,10 +232,10 @@ function loadCustomerData() {
 const setValue = (response)=>{
     $("#customer-tbl").empty();
     response.map((response) => {
-        let recode = `<tr class='cus_name'><td>${response.cus_name}</td>
+        let recode = `<tr class='cus_name'><td>${response.name}</td>
         <td class='gender'>${response.gender}</td><td class='join_date_as_a_loyalty_customer'>${response.join_date_as_a_loyalty_customer}</td>
         <td class='level'>${response.level}</td><td class='total_points'>${response.total_points}</td>
-        <td class='dob'>${response.dob}</td><td class='address_line_01'>${response.address_line_01}</td>
+        <td class='dob'>${response.dob}</td><td class='address_line_01'>${response.address01}</td>
         <td class='address_line_02'>${response.address_line_02}</td><td class='address_line_03'>${response.address_line_03}</td>
         <td class='address_line_04'>${response.address_line_04}</td><td class='address_line_05'>${response.address_line_05}</td>
         <td class='contact_no'>${response.contact_no}</td><td class='email'>${response.email}</td>
@@ -244,4 +244,46 @@ const setValue = (response)=>{
         $("customer-tbl").append(recode);
     })
 }
+
+
+//Click row
+
+let index;
+$("#customer-tbl").on("click","tr",function (){
+    index = $(this).index();
+    let email = $(this).find("email").text();
+    console.log(email);
+
+
+    $.ajax({
+        url:"http://localhost:9090/shop/api/v1/customer/getAllCus",
+        type:"GET",
+        data:{email:email},
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem("token")
+        },
+        success: function (response) {
+            setData(response);
+        },
+        error: function (xhr, status, error) {
+            console.error("Error:", xhr.responseText);
+        }
+    });
+});
+
+function setData(response){
+    $("select[name='level']").val(response.level);
+    $("select[name='gender']").val(response.gender);
+    $("#cusDob").val(response.dob);
+    $("#cusJoinDate").val(response.join_date_as_a_loyalty_customer);
+
+
+}
+
+
+window.loadCustomerData=loadCustomerData;
+
+
+
+
 
