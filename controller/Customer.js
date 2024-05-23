@@ -15,130 +15,130 @@ $("#btnCusSave").on('click',()=>{
     let recentPurchaseDateAndTime = $("#recentPurchaseDateAndTime").val();
 
 
-    // if (!name){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check Name Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (gender==="Select Gender"){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check Gender Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (!joinDate){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check Join Date Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (level==="Select Level"){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check Level Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    // if (!totalPoint){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check Total Point Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (!dob){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check DOB Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (!address01){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check Address 01 Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (!address02) {
-    //     Swal.fire({
-    //         icon: 'error',
-    //         title: 'Please Check Address 02 Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (!address03) {
-    //     Swal.fire({
-    //         icon: 'error',
-    //         title: 'Please Check Address 03 Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (!address04){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check Address 04 Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (!address05){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check Address 05 Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (!contactNo){
-    //     Swal.fire({
-    //             icon:'error',
-    //             title: 'Please Check Contact No Field',
-    //             text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (!email){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check Email Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
-    //
-    // if (!recentPurchaseDateAndTime){
-    //     Swal.fire({
-    //         icon:'error',
-    //         title: 'Please Check Recent Purchase date & time Field',
-    //         text: 'Something went wrong!'
-    //     });
-    //     return;
-    // }
+    if (!name){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check Name Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (gender==="Select Gender"){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check Gender Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (!joinDate){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check Join Date Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (level==="Select Level"){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check Level Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+    if (!totalPoint){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check Total Point Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (!dob){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check DOB Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (!address01){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check Address 01 Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (!address02) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Please Check Address 02 Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (!address03) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Please Check Address 03 Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (!address04){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check Address 04 Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (!address05){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check Address 05 Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (!contactNo){
+        Swal.fire({
+                icon:'error',
+                title: 'Please Check Contact No Field',
+                text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (!email){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check Email Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
+
+    if (!recentPurchaseDateAndTime){
+        Swal.fire({
+            icon:'error',
+            title: 'Please Check Recent Purchase date & time Field',
+            text: 'Something went wrong!'
+        });
+        return;
+    }
 
 
     let cusData = {
