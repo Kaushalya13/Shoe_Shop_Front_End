@@ -642,7 +642,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Cus_Name</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input id="customerName" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -650,9 +650,10 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Gender</label>
                           <div class="col-sm-9">
-                            <select class="form-control">
-                              <option>Male</option>
-                              <option>Female</option>
+                            <select name="gender" aria-label="Default select example" class="form-control">
+                              <option selected>Select Gender</option>
+                              <option value="MALE">MALE</option>
+                              <option value="FEMALE">FEMALE</option>
                             </select>
                           </div>
                         </div>
@@ -663,7 +664,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Join Date <br> As a Loyalty</label>
                           <div class="col-sm-9">
-                            <input class="form-control" type="date" placeholder="dd/mm/yyyy"/>
+                            <input id="cusJoinDate" class="form-control" type="date" placeholder="dd/mm/yyyy"/>
                           </div>
                         </div>
                       </div>
@@ -671,11 +672,12 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Level</label>
                           <div class="col-sm-9">
-                            <select class="form-control">
-                              <option>Gold</option>
-                              <option>Silver</option>
-                              <option>Bronze</option>
-                              <option>New</option>
+                            <select name="level" aria-label="Default select example" class="form-control">
+                              <option selected>Select Level</option>
+                              <option value="GOLD">GOLD</option>
+                              <option value="SILVER">SILVER</option>
+                              <option value="BRONZE">BRONZE</option>
+                              <option value="NEW">NEW</option>
                             </select>
                           </div>
                         </div>
@@ -686,7 +688,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Total Point</label>
                           <div class="col-sm-9">
-                            <input type="number" class="form-control" />
+                            <input name="totalPoint" type="number" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -694,7 +696,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">DOB</label>
                           <div class="col-sm-9">
-                            <input type="date" class="form-control" />
+                            <input name="dob" id="cusDob" type="date" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -704,7 +706,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_01</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="cusAddress01" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -712,7 +714,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_02</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="cusAddress02" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -722,7 +724,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_03</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="cusAddress03" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -730,7 +732,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_04</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="cusAddress04" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -740,7 +742,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_05</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="cusAddress05" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -748,7 +750,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Contact No</label>
                           <div class="col-sm-9">
-                            <input type="tel" class="form-control" />
+                            <input id="cusContact" type="tel" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -758,7 +760,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Email</label>
                           <div class="col-sm-9">
-                            <input type="email" class="form-control" />
+                            <input id="cusEmail" type="email" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -766,7 +768,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Recent Purchase<br>date & time</label>
                           <div class="col-sm-9">
-                            <input type="datetime-local" class="form-control" />
+                            <input id="recentPurchaseDateAndTime" type="datetime-local" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -1442,8 +1444,11 @@
   <script src="assets/js/Chart.roundedBarCharts.js"></script>
 
   <script src="assets/lib/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="module" src="controller/Navigation.js"></script>
   <script type="module" src="controller/SignInForm.js"></script>
+  <script type="module" src="controller/Customer.js"></script>
+  <script type="module" src="controller/Employee.js"></script>
 
 <script>
 
@@ -1453,8 +1458,9 @@
   // })
 
   $("#navigationbar").css('display','none');
-  $("#sidebar").css('display','none');
-  $("#dashboardFrom").css('display','none');
+  $("#signInForm").css('display','none');
+  // $("#sidebar").css('display','none');
+  $("#dashboardFrom").css('display','block');
   $("#employeeForm").css('display','none');
   $("#customerForm").css('display','none');
   $("#supplierForm").css('display','none');
