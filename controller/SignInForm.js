@@ -17,7 +17,8 @@ $("#btnSignIn").on('click',()=>{
 
 
         success:function(response){
-            localStorage.setItem("token",response.token);
+            localStorage.setItem('token',response.token);
+
             $("#signInForm").css('display','none');
             $("#dashboardFrom").css('display','block');
             $("#employeeForm").css('display','none');
