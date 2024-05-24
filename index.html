@@ -1273,21 +1273,20 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">CustomerName</label>
+                          <label class="col-sm-3 col-form-label">Customer Not Registered</label>
                           <div class="col-sm-9">
-                            <select class="form-control">
-                              <option>Select Customer</option>
+                            <select  id="saleCustomerID" name="category" class="form-control">
+                              <option selected>Select Customer</option>
+                              <option>Customer Not Registered</option>
                             </select>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Suppler_Name</label>
+                          <label class="col-sm-3 col-form-label">CustomerName</label>
                           <div class="col-sm-9">
-                            <select class="form-control">
-                              <option>Select Supplier</option>
-                            </select>
+                            <input id="saleCustomerName" value="Enter Customer Name" name="supplierAddress1" type="text" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -1297,19 +1296,17 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Item</label>
                           <div class="col-sm-9">
-                            <select class="form-control">
-                              <option>Select Item</option>
+                            <select id="saleItemSize" name="category" class="form-control">
+                              <option selected>Select Item</option>
                             </select>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Payment</label>
+                          <label class="col-sm-3 col-form-label">Item DESC</label>
                           <div class="col-sm-9">
-                            <select class="form-control">
-                              <option>Select Payment Method</option>
-                            </select>
+                            <input id="saleItemDesc" name="itemDesc" type="text" class="form-control" placeholder="Item Description" disabled>
                           </div>
                         </div>
                       </div>
@@ -1317,63 +1314,17 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Item_desc</label>
+                          <label class="col-sm-3 col-form-label">Item Qty</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input id="saleItemQuantity" name="itemQuantity" placeholder="Quantity" type="number" class="form-control fo" disabled>
                           </div>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_04</label>
+                          <label class="col-sm-3 col-form-label">UnitPrice</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_05</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Address_06</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">ContactNo 01</label>
-                          <div class="col-sm-9">
-                            <input type="tel" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">ContactNo 02</label>
-                          <div class="col-sm-9">
-                            <input type="tel" class="form-control" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Email</label>
-                          <div class="col-sm-9">
-                            <input type="email" class="form-control" />
+                            <input id="saleItemPrice" name="txtUnitPrice" type="number" class="form-control" placeholder="Unit Price" disabled>
                           </div>
                         </div>
                       </div>
@@ -1411,9 +1362,6 @@
                                 Email
                               </th>
                               <th>
-                                Date of Birth
-                              </th>
-                              <th>
                                 Button
                               </th>
                             </tr>
@@ -1440,9 +1388,9 @@
   <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
   <script src="assets/js/dataTables.select.min.js"></script>
   <script src="assets/js/off-canvas.js"></script>
-  <script src="assets/js/hoverable-collapse.js"></script>
-  <script src="assets/js/template.js"></script>
-  <script src="assets/js/settings.js"></script>
+<!--  <script src="assets/js/hoverable-collapse.js"></script>-->
+<!--  <script src="assets/js/template.js"></script>-->
+<!--  <script src="assets/js/settings.js"></script>-->
   <script src="assets/js/todolist.js"></script>
   <script src="assets/js/dashboard.js"></script>
   <script src="assets/js/Chart.roundedBarCharts.js"></script>
