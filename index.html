@@ -852,7 +852,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Sup_Name</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input id="sup_name" name="name" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -861,8 +861,9 @@
                           <label class="col-sm-3 col-form-label">Category </label>
                           <div class="col-sm-9">
                             <select class="form-control">
-                              <option>International </option>
-                              <option>Local</option>
+                              <option selected>Select Category </option>
+                              <option value="INTERNATIONAL">INTERNATIONAL </option>
+                              <option value="LOCAL">LOCAL</option>
                             </select>
                           </div>
                         </div>
@@ -873,7 +874,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_01</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="sup_address1" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -881,7 +882,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_02</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="sup_address2" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -891,7 +892,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_03</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="sup_address3" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -899,7 +900,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_04</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="sup_address4" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -909,7 +910,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_05</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="sup_address5" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -917,7 +918,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Address_06</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" />
+                            <input name="sup_address6" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -927,7 +928,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">ContactNo 01</label>
                           <div class="col-sm-9">
-                            <input type="tel" class="form-control" />
+                            <input name="sup_contact1" type="tel" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -935,7 +936,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">ContactNo 02</label>
                           <div class="col-sm-9">
-                            <input type="tel" class="form-control" />
+                            <input name="sup_contact2" type="tel" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -945,7 +946,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Email</label>
                           <div class="col-sm-9">
-                            <input type="email" class="form-control" />
+                            <input name="sup_email" type="email" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -1452,6 +1453,7 @@
   <script type="module" src="controller/SignInForm.js"></script>
   <script type="module" src="controller/Customer.js"></script>
   <script type="module" src="controller/Employee.js"></script>
+  <script type="module" src="controller/Supplier.js"></script>
 
 <script>
 
