@@ -23,34 +23,35 @@
     <div class="container-fluid page-body-wrapper">
 
       <!--    Navbar  -->
-      <nav  class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo mr-5" href="index.html"><h3>Shoe Shop</h3></a>
-          <a class="navbar-brand brand-logo-mini" href="index.html"></a>
-        </div>
-        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-            <span class="icon-menu"></span>
-          </button>
-          <ul class="navbar-nav mr-lg-2">
-            <li class="nav-item nav-search d-none d-lg-block">
-              <div class="input-group">
-                <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+      <div id="topNavBar">
+        <nav  class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+          <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo mr-5" href="index.html">
+              <h3>Shoe Shop</h3>
+            </a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"></a>
+          </div>
+          <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+            <ul class="navbar-nav mr-lg-2">
+              <li class="nav-item nav-search d-none d-lg-block">
+                <div class="input-group">
+                  <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
                   <span class="input-group-text" id="search">
                     <i class="icon-search"></i>
                   </span>
+                  </div>
+                  <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
                 </div>
-                <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
-              </div>
-            </li>
-          </ul>
-          <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item dropdown"></li>
-          </ul>
-          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-          </button>
-        </div>
-       </nav>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item dropdown"></li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            </button>
+          </div>
+        </nav>
+      </div>
 
       <!--     Sidebar   -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar" >
@@ -380,7 +381,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Emp_Name</label>
                           <div class="col-sm-9">
-                            <input id="name" name="name" type="text" class="form-control" />
+                            <input id="empName" name="name" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -793,36 +794,17 @@
                           <table class="table table-bordered">
                             <thead>
                             <tr>
-                              <th>
-                                Name/Email
-                              </th>
-                              <th>
-                                Gender
-                              </th>
-                              <th>
-                                Join Date As a Loyalty
-                              </th>
-                              <th>
-                                Level
-                              </th>
-                              <th>
-                                Total Point
-                              </th>
-                              <th>
-                                Date of Birth
-                              </th>
-                              <th>
-                                Address
-                              </th>
-                              <th>
-                                Contact
-                              </th>
-                              <th>
-                                Recent Purchase date & time
-                              </th>
-                              <th>
-                                Button
-                              </th>
+                              <th>Name</th>
+                              <th>Email</th>
+                              <th>Gender</th>
+                              <th>Join Date As a Loyalty</th>
+                              <th>Level</th>
+                              <th>Total Point</th>
+                              <th>Date of Birth</th>
+                              <th>Address</th>
+                              <th>Contact</th>
+                              <th>Recent Purchase date & time</th>
+                              <th>Delete</th>
                             </tr>
                             </thead>
                             <tbody id="customer-tbl"></tbody>
@@ -1388,9 +1370,6 @@
   <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
   <script src="assets/js/dataTables.select.min.js"></script>
   <script src="assets/js/off-canvas.js"></script>
-<!--  <script src="assets/js/hoverable-collapse.js"></script>-->
-<!--  <script src="assets/js/template.js"></script>-->
-<!--  <script src="assets/js/settings.js"></script>-->
   <script src="assets/js/todolist.js"></script>
   <script src="assets/js/dashboard.js"></script>
   <script src="assets/js/Chart.roundedBarCharts.js"></script>
@@ -1402,24 +1381,9 @@
   <script type="module" src="controller/Customer.js"></script>
   <script type="module" src="controller/Employee.js"></script>
   <script type="module" src="controller/Supplier.js"></script>
+  <script type="module" src="controller/index.js"></script>
 
 <script>
-
-
-  // $(document).ready(function () {
-  //   $("#dashboardFrom").css('display','block');
-  // })
-
-  $("#navigationbar").css('display','none');
-  $("#signInForm").css('display','none');
-  // $("#sidebar").css('display','none');
-  $("#dashboardFrom").css('display','block');
-  $("#employeeForm").css('display','none');
-  $("#customerForm").css('display','none');
-  $("#supplierForm").css('display','none');
-  $("#inventoryForm").css('display','none');
-  $("#saleForm").css('display','none');
-
 </script>
 </body>
 

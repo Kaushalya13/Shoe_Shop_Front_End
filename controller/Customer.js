@@ -1,289 +1,337 @@
-$("#btnCusSave").on('click',()=>{
-    let name = $("#customerName").val();
-    let gender = "FEMALE";
-    let joinDate = $("#cusJoinDate").val();
-    let level = "NEW";
-    let totalPoint = $("input[name='totalPoint']").val();
-    let dob = $("#cusDob").val();
-    let address01 = $("input[name='cusAddress01']").val();
-    let address02 = $("input[name='cusAddress02']").val();
-    let address03 = $("input[name='cusAddress03']").val();
-    let address04 = $("input[name='cusAddress04']").val();
-    let address05 = $("input[name='cusAddress05']").val();
-    let contactNo = $("#cusContact").val();
-    let email = $("#cusEmail").val();
-    let recentPurchaseDateAndTime = $("#recentPurchaseDateAndTime").val();
+//save Button
+$("#btnCusSave").on("click", () => {
+    let name = $("#customerName").val()
+    let gender = "FEMALE"
+    let joinDate = $("#cusJoinDate").val()
+    let level = "NEW"
+    let totalPoint = $("input[name='totalPoint']").val()
+    let dob = $("#cusDob").val()
+    let address01 = $("input[name='cusAddress01']").val()
+    let address02 = $("input[name='cusAddress02']").val()
+    let address03 = $("input[name='cusAddress03']").val()
+    let address04 = $("input[name='cusAddress04']").val()
+    let address05 = $("input[name='cusAddress05']").val()
+    let contactNo = $("#cusContact").val()
+    let email = $("#cusEmail").val()
+    let recentPurchaseDateAndTime = $("#recentPurchaseDateAndTime").val()
 
-
-    if (!name){
+    if (!name) {
         Swal.fire({
-            icon:'error',
-            title: 'Please Check Name Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Name Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
-    if (gender==="Select Gender"){
+    if (gender === "Select Gender") {
         Swal.fire({
-            icon:'error',
-            title: 'Please Check Gender Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Gender Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
-    if (!joinDate){
+    if (!joinDate) {
         Swal.fire({
-            icon:'error',
-            title: 'Please Check Join Date Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Join Date Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
-    if (level==="Select Level"){
+    if (level === "Select Level") {
         Swal.fire({
-            icon:'error',
-            title: 'Please Check Level Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Level Field",
+            text: "Something went wrong!"
+        })
+        return
     }
-    if (!totalPoint){
+    if (!totalPoint) {
         Swal.fire({
-            icon:'error',
-            title: 'Please Check Total Point Field',
-            text: 'Something went wrong!'
-        });
-        return;
-    }
-
-    if (!dob){
-        Swal.fire({
-            icon:'error',
-            title: 'Please Check DOB Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Total Point Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
-    if (!address01){
+    if (!dob) {
         Swal.fire({
-            icon:'error',
-            title: 'Please Check Address 01 Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check DOB Field",
+            text: "Something went wrong!"
+        })
+        return
+    }
+
+    if (!address01) {
+        Swal.fire({
+            icon: "error",
+            title: "Please Check Address 01 Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
     if (!address02) {
         Swal.fire({
-            icon: 'error',
-            title: 'Please Check Address 02 Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Address 02 Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
     if (!address03) {
         Swal.fire({
-            icon: 'error',
-            title: 'Please Check Address 03 Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Address 03 Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
-    if (!address04){
+    if (!address04) {
         Swal.fire({
-            icon:'error',
-            title: 'Please Check Address 04 Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Address 04 Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
-    if (!address05){
+    if (!address05) {
         Swal.fire({
-            icon:'error',
-            title: 'Please Check Address 05 Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Address 05 Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
-    if (!contactNo){
+    if (!contactNo) {
         Swal.fire({
-                icon:'error',
-                title: 'Please Check Contact No Field',
-                text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Contact No Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
-    if (!email){
+    if (!email) {
         Swal.fire({
-            icon:'error',
-            title: 'Please Check Email Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Email Field",
+            text: "Something went wrong!"
+        })
+        return
     }
 
-    if (!recentPurchaseDateAndTime){
+    if (!recentPurchaseDateAndTime) {
         Swal.fire({
-            icon:'error',
-            title: 'Please Check Recent Purchase date & time Field',
-            text: 'Something went wrong!'
-        });
-        return;
+            icon: "error",
+            title: "Please Check Recent Purchase date & time Field",
+            text: "Something went wrong!"
+        })
+        return
     }
-
 
     let cusData = {
-        cus_name:name,
-        gender:gender,
-        join_date_as_a_loyalty_customer:joinDate,
-        level:level,
-        total_points:totalPoint,
-        dob:dob,
-        address_line_01:address01,
-        address_line_02:address02,
-        address_line_03:address03,
-        address_line_04:address04,
-        address_line_05:address05,
-        contact_no:contactNo,
-        email:email,
-        recent_purchase_date_and_time:recentPurchaseDateAndTime
-    };
+        cus_name: name,
+        gender: gender,
+        join_date_as_a_loyalty_customer: joinDate,
+        level: level,
+        total_points: totalPoint,
+        dob: dob,
+        address_line_01: address01,
+        address_line_02: address02,
+        address_line_03: address03,
+        address_line_04: address04,
+        address_line_05: address05,
+        contact_no: contactNo,
+        email: email,
+        recent_purchase_date_and_time: recentPurchaseDateAndTime
+    }
 
-    let jsonData = JSON.stringify(cusData);
+    let jsonData = JSON.stringify(cusData)
 
-    console.log(localStorage.getItem("token"));
+    console.log(localStorage.getItem("token"))
 
     $.ajax({
-        url:'http://localhost:9090/shop/api/v1/customer/save',
-        type:"POST",
-        contentType: 'application/json',
-        data:jsonData,
-        headers:{
-            "Authorization":"Bearer "+localStorage.getItem("token")
+        url: "http://localhost:9090/shop/api/v1/customer/save",
+        type: "POST",
+        contentType: "application/json",
+        data: jsonData,
+        headers: {
+            Authorization: "Bearer " + localStorage.getItem("token")
         },
 
-        success:function(response){
-            console.log("------------"+response);
-            if (response === false){
+        success: function (response) {
+            console.log("------------" + response)
+            if (response === false) {
                 Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Email is already registered. Please change email.'
-                });
-            }else if (response === true){
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Email is already registered. Please change email."
+                })
+            } else if (response === true) {
                 Swal.fire({
-                    icon: 'success',
-                    title: 'Customer Update Successful',
+                    icon: "success",
+                    title: "Customer Update Successful",
                     showConfirmButton: false,
                     timer: 1500
-                });
-                loadCustomerData();
-            }else {
+                })
+                resetField()
+                loadCustomerData()
+            } else {
                 Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'An error occurred while saving customer data.'
-                });
+                    icon: "error",
+                    title: "Oops...",
+                    text: "An error occurred while saving customer data."
+                })
             }
         },
         error: function (xhr, status, error) {
-            console.error(xhr.responseText);
+            console.error(xhr.responseText)
             Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'An error occurred while saving customer data. Please try again.'
-            });
+                icon: "error",
+                title: "Oops...",
+                text: "An error occurred while saving customer data. Please try again."
+            })
         }
-    });
-    loadCustomerData();
-    $("#btnCusReset>button[type='reset']").click();
+    })
+    loadCustomerData()
 })
 
+// dashboard navigation with load data to table (api call get all and set data to table)
+$("#btnCustomer").on("click", () => {
+    loadCustomerData();
+})
 
 // load Data
 function loadCustomerData() {
     $.ajax({
-        url: 'http://localhost:9090/shop/api/v1/customer',
+        url: "http://localhost:9090/shop/api/v1/customer",
         type: "GET",
         processData: false,
         contentType: false,
         headers: {
-            "Authorization": "Bearer " + localStorage.getItem("token")
+            Authorization: "Bearer " + localStorage.getItem("token")
         },
         success: function (response) {
-            setValue(response);
+            setValue(response)
         },
         error: function (xhr, status, error) {
-            console.error("Error:", xhr.responseText);
+            console.error("Error:", xhr.responseText)
         }
-    });
-}
-
-
-const setValue = (response)=>{
-    $("#customer-tbl").empty();
-    response.map((response) => {
-        let recode = `<tr class='cus_name'><td>${response.name}</td>
-        <td class='gender'>${response.gender}</td><td class='join_date_as_a_loyalty_customer'>${response.join_date_as_a_loyalty_customer}</td>
-        <td class='level'>${response.level}</td><td class='total_points'>${response.total_points}</td>
-        <td class='dob'>${response.dob}</td><td class='address_line_01'>${response.address01}</td>
-        <td class='address_line_02'>${response.address_line_02}</td><td class='address_line_03'>${response.address_line_03}</td>
-        <td class='address_line_04'>${response.address_line_04}</td><td class='address_line_05'>${response.address_line_05}</td>
-        <td class='contact_no'>${response.contact_no}</td><td class='email'>${response.email}</td>
-        <td class='recent_purchase_date_and_time'>${response.recent_purchase_date_and_time}</td>
-        </tr>`
-        $("customer-tbl").append(recode);
     })
 }
 
+$("#btnCusReset").on("click", () => {
+    resetField()
+})
+$("#btnCusUpdate").prop("disabled", true)
+let selectedCusId = null
+
+$("#btnCusUpdate").on("click", () => {
+    console.log("selected customer id", selectedCusId)
+    // need impliment update api call
+    // othor data need get using field and add empty conditon
+
+    // fil this
+})
+
+const resetField = () => {
+    $("#btnCusSave").prop("disabled", false)
+    $("#btnCusUpdate").prop("disabled", true)
+    selectedCusId = null
+
+    $("#customerName").val("")
+    $("#cus_gender").val(null)
+    $("#cusJoinDate").val("")
+    $("#cus_level").val(null)
+    $("input[name='totalPoint']").val("")
+    $("#cusDob").val("")
+    $("input[name='cusAddress01']").val("")
+    $("input[name='cusAddress02']").val("")
+    $("input[name='cusAddress03']").val("")
+    $("input[name='cusAddress04']").val("")
+    $("input[name='cusAddress05']").val("")
+    $("#cusContact").val("")
+    $("#cusEmail").val("")
+    $("#recentPurchaseDateAndTime").val("")
+}
+
+const setValue = (response) => {
+    $("#customer-tbl").empty()
+    response.map((customer) => {
+        let recode = `<tr class='cus_name'>
+                                    <td>${customer.cus_name}</td>
+                                    <td class='email'>${customer.email}</td>
+                                    <td class='gender'>${customer.gender}</td>
+                                    <td class='join_date_as_a_loyalty_customer'>${customer.join_date_as_a_loyalty_customer}</td>
+                                    <td class='level'>${customer.level}</td>
+                                    <td class='total_points'>${customer.total_points}</td>
+                                    <td class='dob'>${customer.dob}</td>
+                                    <td class='address_line_01'>${customer.address_line_01} ${customer.address_line_02} ${customer.address_line_03} ${customer.address_line_04} ${customer.address_line_05}</td>
+                                    <td class='contact_no'>${customer.contact_no}</td>
+                                    <td class='recent_purchase_date_and_time'>${customer.recent_purchase_date_and_time}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger">Delete</button>
+                                    </td>
+                              </tr>`
+        $("#customer-tbl").append(recode)
+        $("#customer-tbl")
+            .find("tr:last .btn-danger")
+            .click(() => handleDeleteOnClick(customer))
+        $("#customer-tbl")
+            .find("tr:last .btn-warning")
+            .click(() => handleEditOnClick(customer))
+    })
+}
+
+// table inside delete button function
+window.handleDeleteOnClick = (customer) => {
+    console.log(customer)
+
+    // add customer delete api call
+    // fil this
+}
+
+window.handleEditOnClick = (customer) => {
+    $("#btnCusUpdate").prop("disabled", false)
+    $("#btnCusSave").prop("disabled", true)
+
+    selectedCusId = customer.cus_code
+    $("#customerName").val(customer.cus_name)
+    $("#cus_gender").val(customer.gender)
+    $("#cusJoinDate").val(customer.join_date_as_a_loyalty_customer)
+    $("#cus_level").val(customer.level)
+    $("input[name='totalPoint']").val(customer.total_points)
+    $("#cusDob").val(customer.dob)
+    $("input[name='cusAddress01']").val(customer.address_line_01)
+    $("input[name='cusAddress02']").val(customer.address_line_02)
+    $("input[name='cusAddress03']").val(customer.address_line_03)
+    $("input[name='cusAddress04']").val(customer.address_line_04)
+    $("input[name='cusAddress05']").val(customer.address_line_05)
+    $("#cusContact").val(customer.contact_no)
+    $("#cusEmail").val(customer.email)
+    $("#recentPurchaseDateAndTime").val(customer.recent_purchase_date_and_time)
+}
 
 //Click row
 
-let index;
-$("#customer-tbl").on("click","tr",function (){
-    index = $(this).index();
-    let email = $(this).find("email").text();
-    console.log(email);
+let index
 
-
-    $.ajax({
-        url:"http://localhost:9090/shop/api/v1/customer/getAllCus",
-        type:"GET",
-        data:{email:email},
-        headers: {
-            "Authorization": "Bearer " + localStorage.getItem("token")
-        },
-        success: function (response) {
-            setData(response);
-        },
-        error: function (xhr, status, error) {
-            console.error("Error:", xhr.responseText);
-        }
-    });
-});
-
-function setData(response){
-    $("select[name='level']").val(response.level);
-    $("select[name='gender']").val(response.gender);
-    $("#cusDob").val(response.dob);
-    $("#cusJoinDate").val(response.join_date_as_a_loyalty_customer);
-
-
+function setData(response) {
+    $("select[name='level']").val(response.level)
+    $("select[name='gender']").val(response.gender)
+    $("#cusDob").val(response.dob)
+    $("#cusJoinDate").val(response.join_date_as_a_loyalty_customer)
 }
 
-
-window.loadCustomerData=loadCustomerData;
-
-
-
-
-
+window.loadCustomerData = loadCustomerData
