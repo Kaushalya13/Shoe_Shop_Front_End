@@ -232,13 +232,8 @@ function loadCustomerData() {
     })
 }
 
-$("#btnCusReset").on("click", () => {
-    resetField()
-})
-
 
 // Update Customer
-
 $("#btnCusUpdate").prop("disabled", true)
 let selectedCusId = null
 
@@ -449,6 +444,12 @@ $("#btnCusUpdate").on("click", () => {
     loadCustomerData()
 })
 
+
+//Reset
+$("#btnCusReset").on("click", () => {
+    resetField()
+})
+
 const resetField = () => {
     $("#btnCusSave").prop("disabled", false)
     $("#btnCusUpdate").prop("disabled", true)
@@ -470,6 +471,8 @@ const resetField = () => {
     $("#recentPurchaseDateAndTime").val("")
 }
 
+
+// fill data with table
 const setValue = (response) => {
     $("#customer-tbl").empty()
     response.map((customer) => {
@@ -494,15 +497,15 @@ const setValue = (response) => {
         $("#customer-tbl").append(recode)
         $("#customer-tbl")
             .find("tr:last .btn-danger")
-            .click(() => handleDeleteOnClick(customer))
+            .click(() => handleDeleteCustomerOnClick(customer))
         $("#customer-tbl")
             .find("tr:last .btn-warning")
-            .click(() => handleEditOnClick(customer))
+            .click(() => handleEditCustomerOnClick(customer))
     })
 }
 
 // table inside delete button function
-window.handleDeleteOnClick = (customer) => {
+window.handleDeleteCustomerOnClick = (customer) => {
     console.log(customer)
 
     let formData = new FormData();
@@ -535,8 +538,7 @@ window.handleDeleteOnClick = (customer) => {
                         `${customer.cus_code} has been deleted.`,
                         'success'
                     )
-
-
+                    resetField()
                     loadCustomerData()
                 },
                 error: function (xhr, status, error) {
@@ -556,7 +558,7 @@ window.handleDeleteOnClick = (customer) => {
 }
 
 // table inside edit button function
-window.handleEditOnClick = (customer) => {
+window.handleEditCustomerOnClick = (customer) => {
     $("#btnCusUpdate").prop("disabled", false)
     $("#btnCusSave").prop("disabled", true)
 
