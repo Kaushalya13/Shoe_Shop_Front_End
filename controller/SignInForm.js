@@ -6,7 +6,7 @@ $("#btnSignIn").on('click',()=>{
     var data = {
         email:email,
         password:password
-    };
+    }
 
 
     $.ajax({
@@ -17,13 +17,18 @@ $("#btnSignIn").on('click',()=>{
 
 
         success:function(response){
-            localStorage.setItem('token',response.token);
+            console.log(response)
+            localStorage.setItem('token',response.token)
+            localStorage.setItem("user", JSON.stringify(response?.user))
 
-            $("#signInForm").css('display','none');
-            $("#dashboardFrom").css('display','block');
-            $("#employeeForm").css('display','none');
+            $("#topNavBar").css("display", "block")
+            $("#sidebar").css("display", "block")
 
-            $("#sidebar").css('display','block');
+            $("#dashboardFrom").css("display", "block")
+            $("#signInForm").css("display", "none")
+
+            $("#email").val(null)
+            $("#password").val(null)
         },
 
         error: function(xhr, status, error) {
@@ -32,9 +37,5 @@ $("#btnSignIn").on('click',()=>{
                 alert("Please check username and password : ")
             }
         }
-    });
-
-    $("#email").val(null);
-    $("#password").val(null);
-
+    })
 })
