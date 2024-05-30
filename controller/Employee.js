@@ -1,5 +1,4 @@
-// Img convert to base64
-
+//Image to base64
 let base64String = "";
 function imageUploaded() {
     let file = document.querySelector('input[type=file]')['files'][0];
@@ -10,10 +9,11 @@ function imageUploaded() {
     reader.readAsDataURL(file);
 }
 
+
 //Employee Save
 $("#btnSave").on('click', () => {
     if ($("input[name='password']").val() === $("#rePassword").val()) {
-        let name = $("#name").val();
+        let name = $("#emp_name").val();
         let pic = $("#pic").val();
         let gender = $("select[name='gender']").val();
         let status = $("select[name='status']").val();
@@ -29,13 +29,13 @@ $("#btnSave").on('click', () => {
         let address5 = $("input[name='address05']").val();
         let contactNo = $("#empContactNo").val();
         let email = $("#empEmail").val();
-        let emergencyContact = $("input[name='emergencyContact']").val();
         let informInCaseOfEmergency = $("#informInCaseOfEmergency").val();
+        let emergencyContact = $("input[name='emergencyContact']").val();
         let password = $("input[name='password']").val();
 
         var formData = new FormData();
 
-        formData.append('emp_name', name);
+        formData.append('emp_name', emp_name);
         formData.append('emp_pro_pic', base64String);
         formData.append('gender', gender);
         formData.append('status', status);
@@ -51,8 +51,8 @@ $("#btnSave").on('click', () => {
         formData.append('address_line_05', address5);
         formData.append('contact_no', contactNo);
         formData.append('email', email);
-        formData.append('emergencyContact', emergencyContact);
         formData.append('informInCaseOfEmergency', informInCaseOfEmergency);
+        formData.append('emergencyContact', emergencyContact);
         formData.append('password', password);
 
         if (!name){
@@ -213,7 +213,6 @@ $("#btnSave").on('click', () => {
                                                                                                     timer: 2000
                                                                                                 })
                                                                                                 // loadData();
-                                                                                                $("#reset").click();
                                                                                             },
                                                                                             error: function (xhr, status, error) {
                                                                                                 console.error("Error:", xhr.responseText);
@@ -249,6 +248,24 @@ $("#btnSave").on('click', () => {
     }
 });
 
+// load Data
+function loadCustomerData() {
+    $.ajax({
+        url: "http://localhost:9090/shop/api/v1/customer",
+        type: "GET",
+        processData: false,
+        contentType: false,
+        headers: {
+            Authorization: "Bearer " + localStorage.getItem("token")
+        },
+        success: function (response) {
+            setValue(response)
+        },
+        error: function (xhr, status, error) {
+            console.error("Error:", xhr.responseText)
+        }
+    })
+}
 
 
 window.imageUploaded=imageUploaded;
