@@ -40,6 +40,7 @@
                   <span class="input-group-text" id="search">
                     <i class="icon-search"></i>
                   </span>
+                    <div id="currentDateContainer"><span id="currentDate"></span></div>
                   </div>
                   <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
                 </div>
@@ -377,12 +378,12 @@
                 <div class="card-body">
                   <h4 class="card-title">Employee Manage Form</h4>
                   <form class="form-sample">
-                    <div class="row">
+                    <div class="row"(>
                       <div class="col-md-6">
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Emp_Name</label>
                           <div class="col-sm-9">
-                            <input id="emp_name" name="name" type="text" class="form-control" />
+                            <input id="empName" name="name" type="text" class="form-control" />
                           </div>
                         </div>
                       </div>
@@ -390,7 +391,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Img</label>
                           <div class="col-sm-9 me-7">
-                            <input id="pic" type="file" class="form-control" onchange="imageUploaded()">
+                            <input id="pic" name="pic" type="file" class="form-control" onchange="imageUploaded()">
                           </div>
                         </div>
                       </div>
@@ -412,10 +413,10 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Status </label>
                           <div class="col-sm-9">
-                            <select id="staus" name="status" class="form-control">
+                            <select id="status" name="status" class="form-control">
                               <option selected>Status</option>
-                              <option value="single">Single</option>
-                              <option value="married">Married</option>
+                              <option value="Single">Single</option>
+                              <option value="Married">Married</option>
                             </select>
                           </div>
                         </div>
@@ -556,7 +557,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Password</label>
                           <div class="col-sm-9">
-                            <input name="password" type="password" class="form-control">
+                            <input id="txtpassword" name="password" type="password" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -564,7 +565,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Re-Password</label>
                           <div class="col-sm-9">
-                            <input id="rePassword" type="password" class="form-control">
+                            <input id="rePassword" name="rePassword" type="password" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -585,15 +586,17 @@
                           <table class="table table-bordered">
                             <thead>
                             <tr>
-                              <th>Picture</th>
                               <th>Name</th>
-                              <th>Email</th>
+                              <th>Picture</th>
                               <th>Gender</th>
                               <th>Status</th>
                               <th>Designation</th>
                               <th>Role</th>
                               <th>Date of Birth</th>
+                              <th>Join Data</th>
                               <th>Branch</th>
+                              <th>Address</th>
+                              <th>Contact No</th>
                               <th>Inform in case of emergency</th>
                               <th>Emergency Contact</th>
                               <th>Delete</th>
