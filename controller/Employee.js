@@ -295,44 +295,49 @@ function loadEmployeeData() {
 }
 
 const setValueEmployee = (response) => {
-    $("#employee-tbl").empty()
-    response.map((employee) =>{
-        let imageSrc = `data:image/jpeg;base64,${employee.pic}`;
+    $("#employee-tbl").empty();
+    response.map((employee) => {
+        let imageSrc = `data:image/jpeg;base64,${employee.emp_pro_pic}`;
+
+        console.log(">>>>>> : " + imageSrc);
 
         let recode = `<tr class='emp_name'>
-                              <td>${employee.emp_name}</td>
-                              <td>
-                                  <div>
-                                       <img id="employeeImage" src="${imageSrc}" onclick="viewImg(event)">
-                                  </div>
-                              </td>
-                              <td class='gender'>${employee.gender}</td>
-                              <td class='status'>${employee.status}</td>
-                              <td class='designation'>${employee.designation}</td>
-                              <td class='role'>${employee.role}</td>
-                              <td class='dob'>${employee.dob}</td>
-                              <td class='joinDate'>${employee.joinDate}</td>
-                              <td class='attached_branch'>${employee.attached_branch}</td>
-                              <td class='address_line_01'>${employee.address_line_01} ${employee.address_line_02} ${employee.address_line_03} ${employee.address_line_04} ${employee.address_line_05} </td>
-                              <td class='contact_no'>${employee.contact_no}</td>
-                              <td class='informInCaseOfEmergency'>${employee.informInCaseOfEmergency}</td>
-                              <td class='emergencyContact'>${employee.emergencyContact}</td>
-                              <td>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                                <button type="button" class="btn btn-warning">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                                </button>
-                              </td>
-                            </tr>`
-        $("#employee-tbl").append(recode)
+                          <td>${employee.emp_name}</td>
+                          <td>
+                              <div>
+                                   <img id="employeeImage" src="${imageSrc}" onclick="viewImg(event)">
+                              </div>
+                          </td>
+                          <td class='gender'>${employee.gender}</td>
+                          <td class='status'>${employee.status}</td>
+                          <td class='designation'>${employee.designation}</td>
+                          <td class='role'>${employee.role}</td>
+                          <td class='dob'>${employee.dob}</td>
+                          <td class='joinDate'>${employee.joinDate}</td>
+                          <td class='attached_branch'>${employee.attached_branch}</td>
+                          <td class='address_line_01'>${employee.address_line_01} ${employee.address_line_02} ${employee.address_line_03} ${employee.address_line_04} ${employee.address_line_05} </td>
+                          <td class='contact_no'>${employee.contact_no}</td>
+                          <td class='informInCaseOfEmergency'>${employee.informInCaseOfEmergency}</td>
+                          <td class='emergencyContact'>${employee.emergencyContact}</td>
+                          <td>
+                            <button type="button" id="buttonDelete" class="btn btn-danger" data-id="${employee.id}">Delete</button>
+                            <button type="button" class="btn btn-warning">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                          </td>
+                        </tr>`;
+        $("#employee-tbl").append(recode);
+
         $("#employee-tbl")
             .find("tr:last .btn-danger")
-            .click(() => handleDeleteEmployeeOnClick(employee))
+            .click(() => handleDeleteEmployeeOnClick(employee));
+
         $("#employee-tbl")
             .find("tr:last .btn-warning")
-            .click(() => handleEditEmployeeOnClick(employee))
-    })
-}
+            .click(() => handleEditEmployeeOnClick(employee));
+    });
+};
+
 
 let imageUpdateBase64 = "";
 function viewImg(event) {
@@ -361,8 +366,7 @@ function viewImg(event) {
 $("#btnUpdate").prop("disabled", true);
 let selectedEmpId = null
 
-
-$("#btnUpdate").on('click', () => {
+$("#btnUpdate").on("click", () => {
     console.log("selected employee id", selectedEmpId)
 
     if ($("#txtpassword").val()=== $("#rePassword").val()){
@@ -627,10 +631,8 @@ $("#btnUpdate").on('click', () => {
 })
 
 window.handleEditEmployeeOnClick = (employee) =>{
-    console.log("hiiiiiiiiiiiiiiiii")
     $("#btnSave").prop("disabled", false)
     $("#btnUpdate").prop("disabled", true)
-    console.log("-------------------")
 
     selectedEmpId = employee.emp_code
     $("#empName").val(employee.emp_name)
@@ -738,5 +740,5 @@ window.handleDeleteEmployeeOnClick = (employee) => {
 
 window.loadEmployeeData=loadEmployeeData
 window.imageUploaded=imageUploaded
-window.handleDeleteEmployeeOnClick=handleDeleteEmployeeOnClick
+
 

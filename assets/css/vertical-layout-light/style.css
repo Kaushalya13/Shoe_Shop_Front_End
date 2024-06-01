@@ -55,7 +55,7 @@ body {
   line-height: 1.5;
   color: #1F1F1F;
   text-align: left;
-  background-color:whitesmoke;
+  /*background-color:red;*/
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -13709,10 +13709,13 @@ body.avgrund-active {
   transition: width 0.25s ease, margin 0.25s ease;
   width: calc(100% - 235px);
   min-height: calc(100vh - 60px);
+  position: relative;
+  left: 235px;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
+
 }
 
 @media (max-width: 991px) {
@@ -13724,6 +13727,7 @@ body.avgrund-active {
 
 .content-wrapper {
   background:#D6EBEE;
+  /*background: #729bf8;*/
   padding: 2.375rem 2.375rem;
   width: 100%;
   -webkit-flex-grow: 1;
@@ -13738,13 +13742,16 @@ body.avgrund-active {
 
 /* Sidebar */
 .sidebar {
-  min-height: calc(100vh - 60px);
-  background:#CAF0F8;
+  min-height: calc(100vh - 90px);
+  position: fixed;
+  margin-top: 15px;
+  background:lightseagreen;
   font-family: "Nunito", sans-serif;
-  font-weight: 500;
-  padding: 0;
+  font-weight: 600;
+  padding: 1.25rem;
   width: 235px;
   z-index: 11;
+  border-radius: 0px 10px 10px 0px;
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
@@ -13777,9 +13784,9 @@ body.avgrund-active {
   -webkit-align-items: center;
   align-items: center;
   white-space: nowrap;
-  padding: 0.8125rem 1.937rem 0.8125rem 1rem;
-  color: #6C7383;
-  border-radius: 8px;
+  padding: 1.8125rem 0.937rem 0.8125rem;
+  color:mediumblue;
+  border-radius: 10px;
   -webkit-transition-duration: 0.45s;
   -moz-transition-duration: 0.45s;
   -o-transition-duration: 0.45s;
@@ -13796,7 +13803,7 @@ body.avgrund-active {
   font-size: 1rem;
   line-height: 1;
   margin-right: 1rem;
-  color: #6C7383;
+  color: mediumblue;
 }
 
 .rtl .sidebar .nav .nav-item .nav-link i.menu-icon {
@@ -13813,7 +13820,7 @@ body.avgrund-active {
   -moz-osx-font-smoothing: grayscale;
   margin-left: auto;
   margin-right: 0;
-  color: #686868;
+  color: black;
 }
 
 .rtl .sidebar .nav .nav-item .nav-link i.menu-arrow {
@@ -14063,7 +14070,7 @@ body.avgrund-active {
 }
 
 .navbar .navbar-brand-wrapper {
-  background: #ffffff;
+  /*background: #ffffff;*/
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
@@ -14785,7 +14792,7 @@ body.avgrund-active {
   position: relative;
   top:150px;
   left: 430px;
-  background: linear-gradient(to right bottom,#737DFE,#FFCAC9);
+  background: linear-gradient(to right top,#6CD0FF,#1C2E4C);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -14835,8 +14842,8 @@ body.avgrund-active {
   width: 30%;
   padding: 10px;
   top: 30px;
-  background-color: #07A3B2;
-  color: #fff;
+  background-color:white;
+  color: black;
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -14848,4 +14855,7 @@ body.avgrund-active {
   flex-direction: column;
 }
 
-
+#currentDate{
+  font-size: 24px;
+  color: black;
+}
