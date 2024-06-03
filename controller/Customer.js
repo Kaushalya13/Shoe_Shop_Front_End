@@ -234,7 +234,8 @@ function loadCustomerData() {
 
 
 // Update Customer
-$("#btnCusUpdate").prop("disabled", true)
+$("#btnCusUpdate").prop("disabled", true);
+
 let selectedCusId = null
 
 $("#btnCusUpdate").on("click", () => {

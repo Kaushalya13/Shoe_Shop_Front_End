@@ -55,7 +55,6 @@ body {
   line-height: 1.5;
   color: #1F1F1F;
   text-align: left;
-  /*background-color:red;*/
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2697,6 +2696,7 @@ input[type="button"].btn-block {
 
 button{
   font-weight: bold;
+
 }
 
 #btnSave{
@@ -4680,9 +4680,9 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background:white;
+  /*background: #f1f2f6;*/
+  background: #f1f2f6;
   background-clip: border-box;
-  border: 1px solid #e3e3e3;
   border-radius: 20px;
 }
 
@@ -10354,7 +10354,7 @@ code {
   border-radius: 4px;
 }
 
-/* Utilities */
+
 .grid-margin {
   margin-bottom: 2.5rem;
 }
@@ -10406,6 +10406,7 @@ code {
 .stretch-card {
   display: -webkit-flex;
   display: flex;
+  top: 10px;
   -webkit-align-items: stretch;
   align-items: stretch;
   justify-content: stretch;
@@ -10705,20 +10706,7 @@ code {
   margin-bottom: 0;
 }
 
-/*.weather-info {*/
-/*  position: absolute;*/
-/*  top: 30px;*/
-/*  right: 24px;*/
-/*}*/
 
-/*.weather-info sup {*/
-/*  font-size: 18px;*/
-/*}*/
-
-/*.weather-info .location {*/
-/*  font-size: 20px;*/
-/*  margin-bottom: 0;*/
-/*}*/
 
 .fs-30 {
   font-size: 30px;
@@ -11164,7 +11152,7 @@ code {
   -webkit-transition: background 0.25s ease;
   -moz-transition: background 0.25s ease;
   -ms-transition: background 0.25s ease;
-  border: none;
+  mso-border-shadow: yes;
 }
 
 .card.tale-bg {
@@ -13715,7 +13703,6 @@ body.avgrund-active {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-
 }
 
 @media (max-width: 991px) {
@@ -13726,8 +13713,8 @@ body.avgrund-active {
 }
 
 .content-wrapper {
-  background:#D6EBEE;
-  /*background: #729bf8;*/
+  background:white;
+  border-radius: 10px 10px 10px 10px;
   padding: 2.375rem 2.375rem;
   width: 100%;
   -webkit-flex-grow: 1;
@@ -13744,14 +13731,15 @@ body.avgrund-active {
 .sidebar {
   min-height: calc(100vh - 90px);
   position: fixed;
+  left: 10px;
   margin-top: 15px;
-  background:lightseagreen;
+  background:lightskyblue;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   padding: 1.25rem;
-  width: 235px;
+  width: 225px;
   z-index: 11;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px 10px 10px 10px;
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
@@ -13903,7 +13891,7 @@ body.avgrund-active {
 }
 
 .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link, .sidebar .nav:not(.sub-menu) > .nav-item:hover[aria-expanded="true"] {
-  background: #4B49AC;
+  background: blue;
   color: #fff;
 }
 
@@ -13942,6 +13930,7 @@ body.avgrund-active {
   margin-top: 16px;
   border-radius: 50%;
   background: #b2b2b2;
+
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link {
@@ -14054,7 +14043,8 @@ body.avgrund-active {
 
 /* Navbar */
 .navbar {
-  font-weight: 400;
+  /*background: linear-gradient(to left bottom,#1C2E4C,#6CD0FF);*/
+  background:lightskyblue;
   transition: background 0.25s ease;
   -webkit-transition: background 0.25s ease;
   -moz-transition: background 0.25s ease;
@@ -14070,13 +14060,12 @@ body.avgrund-active {
 }
 
 .navbar .navbar-brand-wrapper {
-  /*background: #ffffff;*/
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
   -ms-transition: width 0.25s ease, background 0.25s ease;
   width: 235px;
-  height: 60px;
+  height: 10px;
 }
 
 .sidebar-dark .navbar .navbar-brand-wrapper {
@@ -14084,7 +14073,8 @@ body.avgrund-active {
 }
 
 .navbar .navbar-brand-wrapper .navbar-brand {
-  color: #27367f;
+  color: darkblue;
+  font-weight: bolder;
   font-size: 1.5rem;
   margin-right: 0;
   padding: .25rem 0;
@@ -14095,7 +14085,7 @@ body.avgrund-active {
 }
 
 .navbar .navbar-brand-wrapper .navbar-brand:active, .navbar .navbar-brand-wrapper .navbar-brand:focus, .navbar .navbar-brand-wrapper .navbar-brand:hover {
-  color: #1b2658;
+  color: black;
 }
 
 .navbar .navbar-brand-wrapper .navbar-brand img {
@@ -14111,21 +14101,22 @@ body.avgrund-active {
 }
 
 .navbar .navbar-brand-wrapper .brand-logo-mini img {
-  width: calc(70px - 30px);
+  width: calc(100px - 30px);
   max-width: 100%;
   margin: auto;
 }
 
 .navbar .navbar-menu-wrapper {
-  background: #ffffff;
+  background:lightskyblue;
+  /*background: linear-gradient(to right top,#6CD0FF,#1C2E4C);*/
   transition: width 0.25s ease;
+  border-radius: 10px 10px 10px 10px;
   -webkit-transition: width 0.25s ease;
   -moz-transition: width 0.25s ease;
   -ms-transition: width 0.25s ease;
-  color: #6C7383;
   padding-right: 2.375rem;
   padding-left: 2.375rem;
-  width: calc(100% - 235px);
+  width: calc(100% - 265px);
   height: 60px;
 }
 
@@ -14858,4 +14849,9 @@ body.avgrund-active {
 #currentDate{
   font-size: 24px;
   color: black;
+}
+
+#logo{
+  position: relative;
+  left: 30px;
 }
