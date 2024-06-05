@@ -10,7 +10,7 @@ $("#btnSizeSave").on('click', () => {
     let itemExpectedProfit = $("input[name='itemExpectedProfit']").val();
 
 
-    if (itemID === "Select Item ") {
+    if (itemID === "Select Item") {
         Swal.fire({
             icon: 'error',
             title: 'Please Check Item ID Field',
@@ -46,41 +46,41 @@ $("#btnSizeSave").on('click', () => {
         return;
     }
 
-    if (!itemProfitMargin) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Please Check Profit Margin Field',
-            text: 'Something went wrong!'
-        });
-        return;
-    }
+    // if (!itemProfitMargin) {
+    //     Swal.fire({
+    //         icon: 'error',
+    //         title: 'Please Check Profit Margin Field',
+    //         text: 'Something went wrong!'
+    //     });
+    //     return;
+    // }
 
-    if (!itemUnitPriceSale) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Please Check Unit Price Sale Field',
-            text: 'Something went wrong!'
-        });
-        return;
-    }
-
-    if (!itemUnitPriceBuy) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Please Check Unit Price Buy Field',
-            text: 'Something went wrong!'
-        });
-        return;
-    }
-
-    if (!itemExpectedProfit) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Please Check Expected Profit Field',
-            text: 'Something went wrong!'
-        });
-        return;
-    }
+    // if (!itemUnitPriceSale) {
+    //     Swal.fire({
+    //         icon: 'error',
+    //         title: 'Please Check Unit Price Sale Field',
+    //         text: 'Something went wrong!'
+    //     });
+    //     return;
+    // }
+    //
+    // if (!itemUnitPriceBuy) {
+    //     Swal.fire({
+    //         icon: 'error',
+    //         title: 'Please Check Unit Price Buy Field',
+    //         text: 'Something went wrong!'
+    //     });
+    //     return;
+    // }
+    //
+    // if (!itemExpectedProfit) {
+    //     Swal.fire({
+    //         icon: 'error',
+    //         title: 'Please Check Expected Profit Field',
+    //         text: 'Something went wrong!'
+    //     });
+    //     return;
+    // }
 
 
     let sizeDate = {
@@ -146,7 +146,7 @@ function loadSizeData() {
             console.log(response);
             response.map((size) => {
                 let recode = `<tr class="me-6">
-                                    <td><h6 id="item-code-on-size" class="mb-0 text-sm">${size.item_code}</h6>${size.item_code}</td>
+                                    <td><h6 id="item-code-on-size" class="mb-0 text-sm">${size.item_code}</h6></td>
                                     <td><h6 id="size-code" class="mb-0 text-sm">${size.size}</h6></td>
                                     <td>${size.quantity}</td>
                                     <td>${size.profit_margin}</td>
@@ -168,7 +168,7 @@ function loadSizeData() {
 }
 
 //Set Item ID for dropdown
-$("#itemID").on('click', function () {
+$(document).ready(function () {
     $.ajax({
         url: "http://localhost:9090/shop/api/v1/size/getItemIds",
         type: "GET",
@@ -181,14 +181,19 @@ $("#itemID").on('click', function () {
             console.log(response);
             $("#itemID").empty();
             $("#itemID").append(`<option>Select Item</option>`);
-            response.map((response) => {
-                $("#itemID").append(`<option value="${response}">${response}</option>`);
+            response.forEach((item) => {
+                $("#itemID").append(`<option value="${item}">${item}</option>`);
             });
         },
         error: function (xhr, status, error) {
             console.error("Error:", xhr.responseText);
         }
     });
+
+    $("#itemID").on('click',function (event){
+
+    });
+
 })
 
 
