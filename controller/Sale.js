@@ -33,7 +33,7 @@ function setCustomerData(customer_id) {
             "Authorization": "Bearer " + localStorage.getItem("token")
         },
         success: function (response) {
-            $("#saleCustomerName").val(response.name);
+            $("#saleCustomerName").val(response.cus_name);
         },
         error: function (xhr, status, error) {
             console.error("Error:", xhr.responseText);
@@ -42,7 +42,7 @@ function setCustomerData(customer_id) {
 }
 
 
-function loadCustomerIds() {
+function  loadCustomerIds() {
     $.ajax({
         url: "http://localhost:9090/shop/api/v1/customer/getCustomerIds",
         type: "GET",
@@ -125,9 +125,9 @@ $("#saleItemSize").on('change',()=>{
     $("#itemSizeQuantity").focus();
 })
 
-function setDataSize(itemCode) {
+function setDataSize(itemId) {
     $.ajax({
-        url: `http://localhost:9090/shop/api/v1/sale/getItemSize/${itemCode}`,
+        url: `http://localhost:9090/shop/api/v1/sale/getItemSize/${itemId}`,
         type: "GET",
         processData: false,
         contentType: false,
@@ -181,7 +181,7 @@ $("#itemSizeQuantity").on('keyup', () => {
 $(document).ready(function() {
     function recalculateNetTotal() {
         let netTot = 0;
-        $("#sale-tbl-body tr").each(function() {
+        $("#sale-tbl tr").each(function() {
             let itemTotal = parseFloat($(this).find('.itemTotalPrice').text()) || 0;
             netTot += itemTotal;
         });
@@ -190,7 +190,7 @@ $(document).ready(function() {
 
     function updateOrAddItem(itemID, itemSize, quantity, unitePrice) {
         let itemExists = false;
-        $("#sale-tbl-body tr").each(function() {
+        $("#sale-tbl tr").each(function() {
             let currentItemID = $(this).find('td:eq(0)').text();
             let currentItemSize = $(this).find('td:eq(2)').text();
             if (currentItemID === itemID && currentItemSize === itemSize) {
@@ -398,8 +398,8 @@ $("#btnSalePlaceOrder").on('click', () => {
             "Authorization": "Bearer " + localStorage.getItem("token")
         },
         data: JSON.stringify({
-            customer_id: customerID,
-            customer_name: customerName,
+            cus_code: customerID,
+            cus_name: customerName,
             net_total: netTotal,
             purchase_date: today,
             payment_type: paymentType,
@@ -410,7 +410,7 @@ $("#btnSalePlaceOrder").on('click', () => {
 
         success: function (response) {
             if(paymentType === "cash"){
-                $("#sale-tbl-body").empty();
+                $("#sale-tbl").empty();
                 $("#saleCustomerID").val("Select Customer");
                 $("#saleCustomerName").val("");
                 $("#saleNetTotal").text("0");
