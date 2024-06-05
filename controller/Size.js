@@ -10,7 +10,7 @@ $("#btnSizeSave").on('click', () => {
     let itemExpectedProfit = $("input[name='itemExpectedProfit']").val();
 
 
-    if (itemID==="Select Item") {
+    if (itemID === "Select Item ") {
         Swal.fire({
             icon: 'error',
             title: 'Please Check Item ID Field',
@@ -146,7 +146,7 @@ function loadSizeData() {
             console.log(response);
             response.map((size) => {
                 let recode = `<tr class="me-6">
-                                    <td><h6 id="item-code-on-size" class="mb-0 text-sm">${size.item_code}</h6></td>
+                                    <td><h6 id="item-code-on-size" class="mb-0 text-sm">${size.item_code}</h6>${size.item_code}</td>
                                     <td><h6 id="size-code" class="mb-0 text-sm">${size.size}</h6></td>
                                     <td>${size.quantity}</td>
                                     <td>${size.profit_margin}</td>

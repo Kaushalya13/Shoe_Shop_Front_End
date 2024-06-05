@@ -105,7 +105,7 @@ $("#btnItemSave").on('click', () => {
     formData.append('item_pic', itemImageBase64);
     formData.append('category', itemCategory);
     formData.append('status', itemStatus);
-    formData.append('gender', gender);
+    formData.append('genderType', gender);
     formData.append('occasion', occasion);
     formData.append('sup_code', supplierID);
 
@@ -187,10 +187,10 @@ const setInventoryValue = (response) => {
                                     </div>
                                 </td>
                                 <td class='gender'>${inventory.item_code}</td>
-                                <td class='status'>${inventory.item_des}</td>
-                                <td class='designation'>${inventory.category}</td>
+                                <td class='status'>${inventory.category}</td>
+                                <td class='designation'>${inventory.genderType}</td>
                                 <td class='designation'>${inventory.occasion}</td>
-                                <td class='designation'>${inventory.gender}</td>
+                               
                             </tr>`
 
         $("#inventory-tbl").append(recode);
@@ -201,7 +201,7 @@ const setInventoryValue = (response) => {
 let index;
 $("#inventory-tbl").on("click","tr", function () {
     index = $(this).index();
-    let itemCode = $(this).find("#item-code").text();
+    let itemCode = $(this).find("#item_code").text();
 
     $.ajax({
         url: "http://localhost:9090/shop/api/v1/inventory/selectInventory",
