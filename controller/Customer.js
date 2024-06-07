@@ -491,7 +491,7 @@ const setValue = (response) => {
                                     <td>
                                         <button type="button" class="btn btn-danger">Delete</button>
                                         <button type="button" class="btn btn-warning">
-                                        <i class="fa-solid fa-pen-to-square"></i>
+                                            <i class="fa-solid fa-pen-to-square"></i>
                                         </button>
                                     </td>
                               </tr>`
