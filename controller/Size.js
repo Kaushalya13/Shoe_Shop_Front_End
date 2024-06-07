@@ -113,6 +113,7 @@ $("#btnSizeSave").on('click', () => {
                     showConfirmButton: false,
                     timer: 2000
                 });
+                resetFiled()
             } else {
                 Swal.fire({
                     icon: 'error',
@@ -254,6 +255,19 @@ function deleteSize(event) {
     loadItemData();
 }
 
+const resetFiled = () =>{
+    $("#btnSizeSave").prop("disabled",false)
+    $("#btnSizeUpdate").prop("disabled",true)
+
+    $("select[name='itemID']").val('');
+    $("input[name='itemQuantity']").val('');
+    $("input[name='itemSize']").val('');
+    $("#itemStatus").val(null);
+    $("input[name='itemProfitMargin']").val('');
+    $("input[name='itemUnitPrice-Sale']").val('');
+    $("input[name='itemUnitPrice-Buy']").val('');
+    $("input[name='itemExpectedProfit']").val('');
+}
 
 window.deleteSize=deleteSize;
 window.loadSizeData=loadSizeData;
