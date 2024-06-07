@@ -477,7 +477,21 @@ $("#saleAmount").on('input', function() {
 });
 
 
+$("#btnSaleReset").on("click",() => {
+    resetFiled();
+})
 
+const resetFiled = () => {
+    $("#btnAdd").prop("disabled", false)
 
+    $("#saleCustomerID").val(null);
+    $("#saleCustomerName").val(null);
+    $("#saleItemIDs").val(null);
+    $("#saleItemDesc").val(null);
+    $("#saleItemSize").val(null);
+    $("#saleItemQuantity").val(null);
+    $("#itemSizeQuantity").val(null)
+    $("#saleItemPrice").val(null)
+}
 
 window.loadItemIds=loadItemIds;
