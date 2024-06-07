@@ -124,6 +124,7 @@ $("#btnItemSave").on('click', () => {
                 'Item has been saved.',
                 'success'
             ).then(() => {
+                resetField();
                 loadItemData();
             });
         },
@@ -190,7 +191,9 @@ const setInventoryValue = (response) => {
                                 <td class='status'>${inventory.category}</td>
                                 <td class='designation'>${inventory.genderType}</td>
                                 <td class='designation'>${inventory.occasion}</td>
-                               
+                                <button type="button" class="btn btn-warning">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
                             </tr>`
 
         $("#inventory-tbl").append(recode);
@@ -253,7 +256,18 @@ $("#btnItemUpdate").on('click', () => {
     document.getElementById("itemForm").reset();
 })
 
+//Reset
+const resetField = () =>{
+    $("#btnItemSave").prop("disabled",false)
+    $("#btnItemUpdate").prop("disabled",true)
 
+    $("input[name='itemName']").val('');
+    $("input[name='itemPic']").val('');
+    $("input[name='itemCategory']").val('');
+    $("select[name='inventoryGender']").val('');
+    $("select[name='occasion']").val('');
+    $("#supplierIDs").val('');
+}
 
 
 
